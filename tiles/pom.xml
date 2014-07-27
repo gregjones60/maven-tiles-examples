@@ -14,15 +14,11 @@
 -->
 <project>
   <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bluetrainsoftware.maven</groupId>
+  <version>1.1-SNAPSHOT</version>
   <artifactId>tiles-parent</artifactId>
   <packaging>pom</packaging>
   <name>Maven Tiles Parent POM</name>
-
-  <parent>
-    <groupId>it.session.maven</groupId>
-    <artifactId>examples-parent</artifactId>
-    <version>0.8-SNAPSHOT</version>
-  </parent>
 
   <modules>
     <module>maven-compile-tile</module>
@@ -30,7 +26,6 @@
     <module>maven-jetty-tile</module>
     <module>maven-resources-tile</module>
     <module>session-license-tile</module>
-    <module>session-repositories-tile</module>
   </modules>
 
 </project>

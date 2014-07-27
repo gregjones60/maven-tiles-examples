@@ -16,49 +16,18 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.session.maven.tiles</groupId>
   <artifactId>maven-resources-tile</artifactId>
-  <packaging>pom</packaging>
+  <packaging>tile</packaging>
   <version>0.8-SNAPSHOT</version>
   <name>Maven Tile - Maven Resourcese Plugin configuration</name>
 
-  <parent>
-    <groupId>it.session.maven</groupId>
-    <artifactId>tiles-parent</artifactId>
-    <version>0.8-SNAPSHOT</version>
-  </parent>
-
-  <properties>
-    <resources.plugin.filtering>false</resources.plugin.filtering>
-  </properties>
-
-  <build>
-    <resources>
-      <resource>
-        <filtering>${resources.plugin.filtering}</filtering>
-        <directory>src/main/resources</directory>
-      </resource>
-      <resource>
-        <filtering>${resources.plugin.filtering}</filtering>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**</include>
-        </includes>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <filtering>${resources.plugin.filtering}</filtering>
-        <directory>src/test/java</directory>
-        <includes>
-          <include>**</include>
-        </includes>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </testResource>
-    </testResources>
-  </build>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.bluetrainsoftware.maven</groupId>
+				<artifactId>tiles-maven-plugin</artifactId>
+				<version>1.1-SNAPSHOT</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -22,74 +22,29 @@
   <name>wicket-quickstart</name>
   <description>Wicket Quickstart to test tiles-maven-plugin</description>
 
-  <parent>
-    <groupId>it.session.maven</groupId>
-    <artifactId>examples-parent</artifactId>
-    <version>0.8-SNAPSHOT</version>
-  </parent>
-
   <modules>
     <module>runner</module>
   </modules>
 
   <properties>
-    <tile.firstone>it.session.maven.tiles:maven-compile-tile:0.8-SNAPSHOT</tile.firstone>
-    <tile.1>it.session.maven.tiles:maven-eclipse-tile:0.8-SNAPSHOT</tile.1>
-    <tile.2>it.session.maven.tiles:maven-jetty-tile:0.8-SNAPSHOT</tile.2>
+    <tile.firstone>it.session.maven.tiles:maven-compile-tile:[0.5,1)</tile.firstone>
+    <tile.1>it.session.maven.tiles:maven-eclipse-tile:[0.5,1)</tile.1>
+    <tile.2>it.session.maven.tiles:maven-jetty-tile:[0.5,1)</tile.2>
     <tile.3>it.session.maven.tiles:maven-resources-tile:0.8-SNAPSHOT</tile.3>
     <tile.4>it.session.maven.tiles:session-repositories-tile:0.8-SNAPSHOT</tile.4>
     <tile.lastone>it.session.maven.tiles:session-license-tile:0.8-SNAPSHOT</tile.lastone>
 
-    <maventiles.plugin.version>0.8-beta-5</maventiles.plugin.version>
+    <maventiles.plugin.version>1.1-SNAPSHOT</maventiles.plugin.version>
     <compile.plugin.debug>true</compile.plugin.debug>
     <eclipse.plugin.download.sources>true</eclipse.plugin.download.sources>
     <jetty.plugin.version>7.3.0.v20110203</jetty.plugin.version>
     <wicket.version>1.5-RC4.2</wicket.version>
   </properties>
 
-  <dependencies>
-
-    <!--  WICKET DEPENDENCIES -->
-    <dependency>
-      <groupId>org.apache.wicket</groupId>
-      <artifactId>wicket</artifactId>
-      <version>${wicket.version}</version>
-      <type>pom</type>
-    </dependency>
-
-    <!-- LOGGING DEPENDENCIES - LOG4J -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.6.1</version>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.16</version>
-    </dependency>
-
-    <!--  JUNIT DEPENDENCY FOR TESTING -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.1</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.jetty.aggregate</groupId>
-      <artifactId>jetty-all-server</artifactId>
-      <version>${jetty.plugin.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
-        <groupId>it.session.maven.plugins</groupId>
+        <groupId>com.bluetrainsoftware.maven</groupId>
         <artifactId>tiles-maven-plugin</artifactId>
         <version>${maventiles.plugin.version}</version>
         <extensions>true</extensions>
