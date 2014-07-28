@@ -46,6 +46,17 @@
         </excludes>
       </testResource>
     </testResources>
+    <plugins>
+			<plugin>
+				<groupId>com.bluetrainsoftware.maven</groupId>
+				<artifactId>tiles-maven-plugin</artifactId>
+        <configuration>
+          <tiles>
+            <tile>it.session.maven.tiles:session-license-tile:0.8-SNAPSHOT</tile>
+          </tiles>
+        </configuration>
+			</plugin>
+    </plugins>
   </build>
 
 </project>
